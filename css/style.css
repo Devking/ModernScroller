@@ -1,0 +1,193 @@
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    color: #3e3947;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.scroll-nav {
+    display: block;
+    position: fixed;
+    right: 50px;
+    top: 50%;
+    z-index: 2;
+    list-style-type: none;
+
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.scroll-nav li {
+    width: 15px;
+    height: 15px;
+    margin-bottom: 10px;
+}
+
+.nav-dot {
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    line-height: 15px;
+    margin: auto;
+    top: 50%;
+
+    opacity: 0.4;
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+
+.nav-dot:hover {
+    width: 12px;
+    height: 12px;
+}
+
+.nav-dot.selected {
+    opacity: 1;
+}
+
+.nav-tooltip {
+    display: block;
+    position: absolute;
+    left: -20px;
+    margin-top: -14px;
+    z-index: 3;
+    opacity: 0;
+    text-decoration: none;
+    color: white;
+
+    -webkit-transition: all .25s ease-out;
+    -moz-transition: all .25s ease-out;
+    -ms-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+}
+  
+a:hover .nav-tooltip {
+    opacity: 1;
+
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    -o-transform: translateY(0px);
+    transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .nav-tooltip {
+    display: none;
+}
+
+.lte8 .nav-tooltip {
+    display: block;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.fullpane {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.fullpane h1 {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.875rem;
+    color: #EEEEEE;
+}
+
+.fullpane p {
+    display: block;
+    width: 60%;
+    margin: 20px auto;
+    border: 1px dashed white;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.fullpane .quote {
+    position: relative;
+    top: 45%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.875rem;
+    line-height: 2rem;
+    width: 60%;
+    margin: 0 auto;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.fullpane .quote-body:before {
+    font-family: Arial;
+    content: open-quote;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.fullpane .quote-body:after {
+    font-family: Arial;
+    content: close-quote;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.fullpane .quote-credit:before {
+    content: "\2014";
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    font-weight: 300;
+}
+
+.fullpane .quote-credit {
+    font-weight: 600;
+}
+
+.bluetheme {
+    background: rgba(0,139,139,0.6);
+}
+
+.redtheme {
+    background: rgba(139,0,0,0.6);
+}
