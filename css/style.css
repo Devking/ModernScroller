@@ -24,7 +24,7 @@ body {
     position: fixed;
     right: 50px;
     top: 50%;
-    z-index: 2;
+    z-index: 3;
     list-style-type: none;
 
     -webkit-transform: translateY(-50%);
