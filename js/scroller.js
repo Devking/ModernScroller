@@ -7,23 +7,23 @@ $(function () {
     $(window).on('scroll', function() { updateNavigation() })
     $(window).on('resize', function() { updateNavigation() })
 
-    $('.scroll-nav a').on('click', function(event) {
+    $('.fn-scroll-nav a').on('click', function(event) {
         event.preventDefault()
         smoothScroll($(this.hash))
     })
 
-    $('.nav-dot').on('click', function() {
-        $('.nav-dot.selected').removeClass('selected')
-        $(this).addClass('selected')
-    })
-
     function updateNavigation () {
-        $('.fullpane').each(function() {
-
+        $('.fn-fullpane').each(function() {
+            var thisSection = $(this).attr('id').split('-')[1]
+            if ( ( $(this).offset().top - $(window).height()/2 < $(window).scrollTop() ) && ( $(this).offset().top + $(this).height() - $(window).height()/2 > $(window).scrollTop() ) ) {
+                $('.fn-dot-'+thisSection).addClass('selected')
+            } else {
+                $('.fn-dot-'+thisSection).removeClass('selected')
+            }
         })
     }
 
     function smoothScroll (target) {
-        $('body, html').animate({'scrollTop': target.offset().top}, SCROLL_SPEED)
+        $('body').animate({'scrollTop': target.offset().top}, SCROLL_SPEED)
     }
 })
