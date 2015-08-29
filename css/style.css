@@ -108,10 +108,51 @@ a:hover .nav-tooltip {
     height: 100%;
 }
 
+.bg-1 {
+    background-image: linear-gradient(rgba(255, 204, 102, 0.4), rgba(0, 0, 0, 0.6)), url('../bg/sanfran.jpg');
+}
+
+.bg-2 {
+    background-image: linear-gradient(rgba(0,139,139, 0.1), rgba(0, 0, 0, 0.6)), url('../bg/alone.jpg');
+}
+
 .fullpane {
     width: 100%;
-    height: 100%;
     overflow: hidden;
+}
+
+.fixed-pane {
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+
+.scroll-pane {
+    position: relative;
+    min-height: 100%;
+    padding: 4em 0;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    z-index: 2;  
+}
+
+.quote-pane {
+    height: 100%;
+}
+
+.darktheme {
+    color: black;
+}
+
+.darktheme h1 {
+    color: black !important;
+}
+
+.darktheme p {
+    border: 1px dashed black !important;
 }
 
 .fullpane h1 {
@@ -128,6 +169,7 @@ a:hover .nav-tooltip {
 }
 
 .fullpane p {
+    font-family: Roboto, serif;
     display: block;
     width: 60%;
     margin: 20px auto;
@@ -138,6 +180,9 @@ a:hover .nav-tooltip {
     line-height: 1.5rem;
     text-align: justify;
     text-indent: 20px;
+}
+.lighttheme {
+    color: white;
 }
 
 .fullpane .quote {
@@ -185,9 +230,9 @@ a:hover .nav-tooltip {
 }
 
 .bluetheme {
-    background: rgba(0,139,139,0.6);
+    background-color: rgba(0,139,139,0.6);
 }
 
 .redtheme {
-    background: rgba(139,0,0,0.6);
+    background-color: rgba(139,0,0,0.6);
 }
